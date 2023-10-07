@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
+import { CharacterResult } from './character-result';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +11,11 @@ export class SearchDataService {
 
   constructor(private http: HttpClient) { }
 
-  makeRequestCharacter() {
+  getCharacter(): Observable<CharacterResult> {
     const API_CHARACTER = `${this.API}/character`
 
-    this.http.get(API_CHARACTER).subscribe(json => {
-      console.log(API_CHARACTER)
-      console.log((json as any).results)
-    })
+    return this.http.get<CharacterResult>(API_CHARACTER)
   }
 }
+
+

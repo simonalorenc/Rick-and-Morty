@@ -1,4 +1,13 @@
 <div class="characters-container">
-    <p>characters works!</p>
+    <div class="character" *ngFor="let character of charactersArray">
+        <div class="character__img">
+            <img [src]="character.image" alt="">
+        </div>
+        <div class="character__id">{{character.id}}</div>
+        <div class="character__name">{{character.name}}</div>
+        <div class="character__gender">{{character.gender}}</div>
+        <div class="character__species">{{character.species}}</div>
+        <div class="character__status">{{character.species}}</div>
+    </div>
 </div>
 
