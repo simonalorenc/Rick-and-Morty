@@ -1,0 +1,65 @@
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 75px;
+}
+
+.title {
+    font-size: 35px;
+    color: gray;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.characters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 75px;
+    background-color: rgb(247, 204, 211);
+    border: 2px solid rgb(236, 121, 140);
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+}
+
+.locations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 75px;
+    background-color: rgb(215, 232, 241);
+    border: 2px solid rgb(134, 181, 207);
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+}
+
+.episodes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 75px;
+    background-color: rgb(208, 223, 211);
+    border: 2px solid rgb(129, 166, 136);
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}

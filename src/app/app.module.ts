@@ -7,13 +7,15 @@ import { CharactersComponent } from './characters/characters.component';
 import { LocationsComponent } from './locations/locations.component';
 import { EpisodesComponent } from './episodes/episodes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChoiceComponent } from './choice/choice.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
     LocationsComponent,
-    EpisodesComponent
+    EpisodesComponent,
+    ChoiceComponent
   ],
   imports: [
     BrowserModule,
