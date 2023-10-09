@@ -1,4 +1,8 @@
-<div class="locations-container" *ngFor="let location of locationsArray">
-    <p>{{location.name}}</p>
-</div>
-
+<a routerLink="/location/{{location.id}}" *ngFor="let location of locationsArray">
+  <div class="locations-container" >
+    <div class="location__id">{{ location.id }}</div>
+    <div class="location__info">{{ location.name }}</div>
+    <div class="location__info">{{ location.type }}</div>
+    <div class="location__info">{{ location.dimension }}</div>
+  </div>
+</a>

@@ -28,8 +28,6 @@ export class CharacterDetailsComponent implements OnInit {
     this.searchDataService.getCharacter(id)
       .subscribe(character => {
         this.character = character
-        console.log(character)
-        console.log(this.character.episode)
         this.episodesArray = this.character.episode
         
       })

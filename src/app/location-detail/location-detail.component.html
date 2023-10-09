@@ -1,0 +1,8 @@
+<div class="locations-container">
+  <div class="location__id">{{ location.id }}</div>
+  <div class="location__info">{{ location.name }}</div>
+  <div class="location__info">{{ location.type }}</div>
+  <div class="location__info">{{ location.dimension }}</div>
+  <div class="location__info">{{ location.created }}</div>
+  <div class="location__info" *ngFor="let resident of residentsArray">{{ resident }}</div>
+</div>

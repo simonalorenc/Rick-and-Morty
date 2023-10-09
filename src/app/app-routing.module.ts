@@ -5,13 +5,15 @@ import { CharactersComponent } from './characters/characters.component';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { LocationsComponent } from './locations/locations.component';
 import { EpisodesComponent } from './episodes/episodes.component';
+import { LocationDetailComponent } from './location-detail/location-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/choice', pathMatch: 'full' },
   { path: 'choice', component: ChoiceComponent },
   { path: 'characters', component: CharactersComponent },
-  { path: 'detail/:id', component: CharacterDetailsComponent },
-  { path: 'locations', component: LocationsComponent }
+  { path: 'character/:id', component: CharacterDetailsComponent },
+  { path: 'locations', component: LocationsComponent },
+  { path: 'location/:id', component: LocationDetailComponent}
 ];
 
 @NgModule({

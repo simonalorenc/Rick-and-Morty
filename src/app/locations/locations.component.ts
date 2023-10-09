@@ -8,7 +8,9 @@ import { Location } from '../location';
   styleUrls: ['./locations.component.scss']
 })
 export class LocationsComponent implements OnInit{
+  location!: Location
   locationsArray!: Location[]
+  residentsArray: string[] = []
 
   constructor(private locationsService: LocationsService) {}
 

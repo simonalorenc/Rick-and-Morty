@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { LocationResult, Location } from './location';
 import { HttpClient } from '@angular/common/http';
 
@@ -31,5 +31,10 @@ export class LocationsService {
 
   getLocationsArray(): Observable<Location[]> {
     return this.locationsArraySubject.asObservable()
+  }
+
+  getLocation(id: number): Observable<Location> {
+    const location = this.locationsArray.find((l:any) => l.id === id)!
+    return of(location)
   }
 }
