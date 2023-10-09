@@ -1,0 +1,11 @@
+<div class="character">
+  <img class="character__img" [src]="character.image" alt="" />
+  <div class="character__id">{{ character.id }}</div>
+  <div class="character__info">{{ character.name }}</div>
+  <div class="character__info">{{ character.gender }}</div>
+  <div class="character__info">{{ character.status }}</div>
+  <div class="character__info">{{ character.species }}</div>
+  <div class="character__info">{{ character.url }}</div>
+  <div class="character__info">{{ character.created }}</div>
+  <div class="character__episode" *ngFor="let episode of episodesArray">{{episode}}</div>
+</div>

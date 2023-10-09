@@ -8,6 +8,7 @@ import { LocationsComponent } from './locations/locations.component';
 import { EpisodesComponent } from './episodes/episodes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ChoiceComponent } from './choice/choice.component';
+import { CharacterDetailsComponent } from './character-details/character-details.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ChoiceComponent } from './choice/choice.component';
     CharactersComponent,
     LocationsComponent,
     EpisodesComponent,
-    ChoiceComponent
+    ChoiceComponent,
+    CharacterDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,21 @@
-<div class="container">
-    <div class="character" *ngFor="let character of charactersArray">
-        <img class="character__img" [src]="character.image" alt="">
-        <div class="character__id">{{character.id}}</div>
-        <div class="character__info">{{character.name}}</div>
-        <div class="character__info">{{character.gender}}</div>
-        <div class="character__info">{{character.species}}</div>
-    </div>
+<div class="nav-container">
+    <a routerLink="/choice"><div class="back">back</div></a>
+    <div class="title">Characters: </div>
+    <div class="next" (click)="addPageNumber(); getPageNumber()">next page</div>
 </div>
-<div class="page" (click)="getPageNumber()">></div>
-
+<div class="container">
+  <a *ngFor="let character of charactersArray" routerLink="/detail/{{ character.id }}">
+    <div class="character">
+      <img class="character__img" [src]="character.image" alt="" />
+      <div class="character__id">{{ character.id }}</div>
+      <div class="character__info">{{ character.name }}</div>
+      <div class="character__info">{{ character.gender }}</div>
+      <div class="character__info">{{ character.species }}</div>
+    </div>
+  </a>
+</div>
+<div class="page-number-container">
+  <div class="minus" (click)="removePageNumber(); getPageNumber()"><</div>
+  <div class="page-number">{{ pageNumber }}</div>
+  <div class="plus" (click)="addPageNumber(); getPageNumber()">></div>
+</div>
