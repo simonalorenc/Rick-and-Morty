@@ -1,6 +1,6 @@
 export interface LocationResult {
     info: Info
-    results: Result[]
+    results: Location[]
   }
   
   export interface Info {
@@ -10,7 +10,7 @@ export interface LocationResult {
     prev: any
   }
   
-  export interface Result {
+  export interface Location {
     id: number
     name: string
     type: string
