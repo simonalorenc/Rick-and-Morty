@@ -16,6 +16,12 @@ export class SearchDataService {
 
     return this.http.get<CharacterResult>(API_CHARACTER)
   }
+
+  getPage(pageNumber: Number): Observable<CharacterResult> {
+    const API_CHARACTER = `${this.API}/character/?page=${pageNumber}`
+    console.log('fds')
+    return this.http.get<CharacterResult>(API_CHARACTER)
+  }
 }
 
 
