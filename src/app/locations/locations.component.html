@@ -1,8 +1,16 @@
-<a routerLink="/location/{{location.id}}" *ngFor="let location of locationsArray">
-  <div class="locations-container" >
+<a
+  routerLink="/location/{{ location.id }}"
+  *ngFor="let location of locationsArray"
+>
+  <div class="locations-container">
     <div class="location__id">{{ location.id }}</div>
     <div class="location__info">{{ location.name }}</div>
     <div class="location__info">{{ location.type }}</div>
     <div class="location__info">{{ location.dimension }}</div>
   </div>
 </a>
+<div class="page-number-container">
+  <div class="minus" (click)="removePageNumber(); getPageNumber()"><</div>
+  <div class="page-number">{{ pageNumber }}</div>
+  <div class="plus" (click)="addPageNumber(); getPageNumber()">></div>
+</div>

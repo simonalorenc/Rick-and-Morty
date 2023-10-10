@@ -45,6 +45,7 @@ export class CharactersComponent implements OnInit {
     this.searchDataService.getPage(this.pageNumber).subscribe({
       next: (response) => {
         this.charactersArray = response.results;
+        this.searchDataService.charactersArray = this.charactersArray
       },
       error: (error) => console.log('GetCharcter error: ' + error),
       complete: () => console.log('GetCharcter complete'),

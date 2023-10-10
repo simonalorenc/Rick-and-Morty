@@ -37,6 +37,7 @@ export class SearchDataService {
 
   getPage(pageNumber: Number): Observable<CharacterResult> {
     const API_CHARACTER = `${this.API}/character/?page=${pageNumber}`
+    console.log(this.charactersArray)
     return this.http.get<CharacterResult>(API_CHARACTER)
   }
 

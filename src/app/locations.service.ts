@@ -37,4 +37,9 @@ export class LocationsService {
     const location = this.locationsArray.find((l:any) => l.id === id)!
     return of(location)
   }
+
+  getPage(pageNumber: Number): Observable<LocationResult> {
+    const API_LOCATION  = `${this.API}/location/?page=${pageNumber}`
+    return this.http.get<LocationResult>(API_LOCATION )
+  }
 }

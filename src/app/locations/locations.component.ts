@@ -11,6 +11,7 @@ export class LocationsComponent implements OnInit{
   location!: Location
   locationsArray!: Location[]
   residentsArray: string[] = []
+  pageNumber: number = 1
 
   constructor(private locationsService: LocationsService) {}
 
@@ -21,6 +22,31 @@ export class LocationsComponent implements OnInit{
         this.locationsArray = locations
       }
     )
+  }
+
+  addPageNumber(): void {
+    this.pageNumber = this.pageNumber + 1;
+    if (this.pageNumber > 42) {
+      this.pageNumber = 42;
+    }
+  }
+
+  removePageNumber(): void {
+    this.pageNumber = this.pageNumber - 1;
+    if (this.pageNumber < 1) {
+      this.pageNumber = 1;
+    }
+  }
+
+  getPageNumber(): void {
+    this.locationsService.getPage(this.pageNumber).subscribe({
+      next: (response) => {
+        this.locationsArray = response.results;
+        this.locationsService.locationsArray = this.locationsArray
+      },
+      error: (error) => console.log('GetCharcter error: ' + error),
+      complete: () => console.log('GetCharcter complete'),
+    });
   }
 
 }

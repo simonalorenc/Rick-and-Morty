@@ -28,6 +28,7 @@ export class CharacterDetailsComponent implements OnInit {
     this.searchDataService.getCharacter(id)
       .subscribe(character => {
         this.character = character
+        console.log(character.id)
         this.episodesArray = this.character.episode
         
       })
