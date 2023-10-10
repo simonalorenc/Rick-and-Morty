@@ -1,3 +1,22 @@
+.nav-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.back {
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(134, 181, 207);
+    letter-spacing: 5px;
+    background-color: rgb(215, 232, 241);
+    border: 2px solid rgb(134, 181, 207);
+    border-radius: 10px;
+    padding: 3px;
+    cursor: pointer;
+}
+
 .locations-container {
     display: flex;
     justify-content: center;
@@ -29,4 +48,8 @@
     border: 2px solid white;
     border-radius: 50%;
     background-color: white;
+}
+
+a {
+    text-decoration: none;
 }

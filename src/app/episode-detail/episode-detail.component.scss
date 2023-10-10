@@ -1,3 +1,22 @@
+.nav-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.back {
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(129, 166, 136);
+    letter-spacing: 5px;
+    background-color: rgb(208, 223, 211);
+    border: 2px solid rgb(129, 166, 136);
+    border-radius: 10px;
+    padding: 3px;
+    cursor: pointer;
+}
+
 .episode {
   display: flex;
   justify-content: center;
@@ -38,4 +57,8 @@
     color: rgb(129, 166, 136);
     margin: 4px;
   }
+}
+
+a {
+    text-decoration: none;
 }

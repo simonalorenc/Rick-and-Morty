@@ -1,9 +1,13 @@
+<div class="nav-container">
+  <a routerLink="/episodes"><div class="back">back</div></a>
+</div>
 <div class="episode">
-    <div class="episode__id">{{ episode.id }}</div>
-    <div class="episode__info">{{ episode.name }}</div>
-    <div class="episode__info">{{ episode.air_date }}</div>
-    <div class="episode__info">{{ episode.episode }}</div>
-    <div class="episode__characters" *ngFor="let character of charactersArray">{{character}}</div>
-    <div class="episode__info">{{ episode.created }}</div>
+  <div class="episode__id">{{ episode.id }}</div>
+  <div class="episode__info">{{ episode.name }}</div>
+  <div class="episode__info">{{ episode.air_date }}</div>
+  <div class="episode__info">{{ episode.episode }}</div>
+  <div class="episode__characters" *ngFor="let character of charactersArray">
+    {{ character }}
   </div>
-  
+  <div class="episode__info">{{ episode.created }}</div>
+</div>
