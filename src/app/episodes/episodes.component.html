@@ -1,4 +1,23 @@
-<div class="episodes-container">
-    <p>episodes works!</p>
+<div class="nav-container">
+  <a routerLink="/choice"><div class="back">back</div></a>
+  <div class="title">Episodes:</div>
+  <div class="next" (click)="addPageNumber(); getPageNumber()">next page</div>
 </div>
-
+<div class="container">
+  <a
+    routerLink="/episode/{{ episode.id }}"
+    *ngFor="let episode of episodesArray"
+  >
+    <div class="episode">
+      <div class="episode__id">{{ episode.id }}</div>
+      <div class="episode__info">{{ episode.name }}</div>
+      <div class="episode__info">{{ episode.air_date }}</div>
+      <div class="episode__info">{{ episode.episode }}</div>
+    </div>
+  </a>
+</div>
+<div class="page-number-container">
+  <div class="minus" (click)="removePageNumber(); getPageNumber()"><</div>
+  <div class="page-number">{{ pageNumber }}</div>
+  <div class="plus" (click)="addPageNumber(); getPageNumber()">></div>
+</div>

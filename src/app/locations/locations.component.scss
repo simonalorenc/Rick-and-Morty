@@ -1,34 +1,80 @@
-.locations-container {
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    width: 100vh;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back {
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(134, 181, 207);
+    letter-spacing: 5px;
+    background-color: rgb(215, 232, 241);
+    border: 2px solid rgb(134, 181, 207);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.next {
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(134, 181, 207);
+    letter-spacing: 5px;
+    background-color: rgb(215, 232, 241);
+    border: 2px solid rgb(134, 181, 207);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.title {
+
+    font-size: 55px;
+    font-weight: 500;
+    color: rgb(134, 181, 207);
+    letter-spacing: 5px;
+}
+
+.location {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: auto;
+    width: 300px;
     height: auto;
     background-color: rgb(215, 232, 241);
     border: 2px solid rgb(134, 181, 207);
     border-radius: 10px;
-    margin-bottom: 10px
-}
+    margin-bottom: 10px;
 
-.location__info {
-    font-weight: 600;
-    color: rgb(134, 181, 207);
-    margin: 4px;
-}
+    & &__info {
+        font-weight: 600;
+        color: rgb(134, 181, 207);
+        margin: 4px;
+    }
 
-.location__id {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    font-weight: 600;
-    color: rgb(134, 181, 207);
-    margin: 4px;
-    border: 2px solid white;
-    border-radius: 50%;
-    background-color: white;
+    & &__id {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        font-weight: 600;
+        color: rgb(134, 181, 207);
+        margin: 4px;
+        border: 2px solid white;
+        border-radius: 50%;
+        background-color: white;
+    }
 }
 
 .page-number-container {

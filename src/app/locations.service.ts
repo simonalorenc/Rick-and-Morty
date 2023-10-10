@@ -23,8 +23,10 @@ export class LocationsService {
       (locationResult: LocationResult) => {
         const locations = locationResult.results
         this.locationsArray = locations
-        console.log(locations)
         this.locationsArraySubject.next(locations)
+      },
+      (error) => {
+        console.error('GetLocation error: ' + error)
       }
     )
   }

@@ -8,7 +8,6 @@ import { Location } from '../location';
   styleUrls: ['./locations.component.scss']
 })
 export class LocationsComponent implements OnInit{
-  location!: Location
   locationsArray!: Location[]
   residentsArray: string[] = []
   pageNumber: number = 1
@@ -26,8 +25,8 @@ export class LocationsComponent implements OnInit{
 
   addPageNumber(): void {
     this.pageNumber = this.pageNumber + 1;
-    if (this.pageNumber > 42) {
-      this.pageNumber = 42;
+    if (this.pageNumber > 7) {
+      this.pageNumber = 7;
     }
   }
 
@@ -44,8 +43,8 @@ export class LocationsComponent implements OnInit{
         this.locationsArray = response.results;
         this.locationsService.locationsArray = this.locationsArray
       },
-      error: (error) => console.log('GetCharcter error: ' + error),
-      complete: () => console.log('GetCharcter complete'),
+      error: (error) => console.log('GetLocation error: ' + error),
+      complete: () => console.log('GetLocation complete'),
     });
   }
 

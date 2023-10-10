@@ -1,0 +1,41 @@
+.episode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  background-color: rgb(208, 223, 211);
+  border: 2px solid rgb(129, 166, 136);
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  & &__info {
+    font-weight: 600;
+    color: rgb(129, 166, 136);
+    margin: 4px;
+  }
+
+  & &__id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-weight: 600;
+    color: rgb(129, 166, 136);
+    margin: 4px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  & &__characters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: rgb(129, 166, 136);
+    margin: 4px;
+  }
+}
